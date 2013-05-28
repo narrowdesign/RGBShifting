@@ -1,4 +1,5 @@
 RGBShifting
 ===========
 
-RGB Shifting effect on images with html 5 canvas
+Use the following link for more info and demo:
+[http://pooyarm.github.io/RGBShifting/]
