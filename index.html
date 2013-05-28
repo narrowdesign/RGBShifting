@@ -1,0 +1,145 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>RGB Shifting</title>
+	<meta name="description" content="RGB Shifting effect on images with html 5 canvas.">
+	<meta name="author" content="Pooya Rostam http://1pooya.com">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+	<!--<script src='https://github.com/pooyarm/RGBShifting/raw/master/js/rgbshifting-min.js'></script>-->
+	<script src='http://localhost/rgbshifting/js/rgbshifting-min.js'></script>
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href='styles.css' />
+
+	<script>
+		$(document).ready(function(){
+
+			$("#image1").rgbshifting({
+				image: 'img/1.jpg',
+				radius: '1.2%',
+				mode: 'horizental'
+			});
+
+			$("#image2").rgbshifting({
+				image: 'img/2.jpg',
+				radius: '2.25%',
+				mode: 'horizental'
+			});
+
+			$("#image3").rgbshifting({
+				image: 'img/3.jpg',
+				radius: '1.4%',
+				mode: 'horizental'
+			});
+
+			$("#image4").rgbshifting({
+				image: 'img/4.jpg',
+				radius: '1%',
+				mode: 'horizental'
+			});
+
+			$("#image5").rgbshifting({
+				image: 'img/5.jpg',
+				radius: '2%',
+				mode: 'vertical'
+			});
+
+		});
+	</script>
+</head>
+<body>
+
+	<div id='intro'>
+		<h1><a href='#demo'>Demo</a><a href='https://github.com/pooyarm/RGBShifting' class='github'>Github</a>RGB Shifting</h1>
+		<p>
+			This jquery plugin allows you to have RGB Shifting effect on your images (using canvas). checkout <a href='#demo'>demo</a> for more info about this effect.
+		</p>
+
+		<h2>How to use</h2>
+		<p>
+			First, download the RGB Shifting plugin from <a href='https://github.com/pooyarm/RGBShifting' target='_blank'>github</a> and include it in your html page.
+			<br/>
+			<br/>
+			Now, you need to put a canvas element in your html where you want this image shown, use the following code for creating a canvas:
+			<br/>
+			<code>&lt;canvas id='example'&gt;&lt;/canvas&gt;</code>
+			<br/><br/>
+			Let's call the plugin to put effect on image:
+<pre><code>$(document).ready(function(){
+	$("#example").rgbshifting({
+		image: 'image_url_here.jpg'
+	});
+});</code></pre>
+		</p>
+
+		<h2>Options</h2>
+		<p>
+			Here is the list of options:
+		</p>
+		<table cellspacing='0' cellpadding='0'>
+			<tr>
+				<th style='width: 15%;'>Option</th>
+				<th style='width: 15%;'>Default</th>
+				<th>Description</th>
+			<tr/>
+			<tr>
+				<td>image *</td>
+				<td>false</td>
+				<td>url of image which you want to load or javascript Image object.</td>
+			</tr>
+			<tr>
+				<td>mode</td>
+				<td>horizental</td>
+				<td><b>horizental</b> or <b>vertical</b> ?</td>
+			</tr>
+			<tr>
+				<td>radius</td>
+				<td>1.25%</td>
+				<td>radius of rgb shifting layers, you can pass it in pixels or percent. if you want to pass it in pixels use integer value.</td>
+			</tr>
+		</table>
+		<small>starred options are required.</small>
+		
+
+		<h2>Browser support</h2>
+		<p>
+			Browsers which supports canvas, supports this plugin. (<a href='http://caniuse.com/canvas' target='_blank'>Can I use canvas?</a>)
+
+		</p>
+	</div>
+
+	<div id='demo'>
+		<a name='demo'></a>
+		<ul>
+			<li>
+				<img src='img/1.jpg' />
+				<canvas id='image1'></canvas>
+			</li>
+			<li>
+				<img src='img/2.jpg' />
+				<canvas id='image2'></canvas>
+			</li>
+			<li>
+				<img src='img/3.jpg' />
+				<canvas id='image3'></canvas>
+			</li>
+			<li>
+				<img src='img/4.jpg' />
+				<canvas id='image4'></canvas>
+			</li>
+			<li>
+				<img src='img/5.jpg' />
+				<canvas id='image5'></canvas>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>
