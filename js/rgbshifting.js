@@ -5,7 +5,7 @@
 		this.options = $.extend({
 			// These are the defaults.
 			image: false,
-			mode: "horizental",
+			mode: "horizontal",
 			radius: '1.25%'
 		}, _options );
 
@@ -63,7 +63,7 @@
 				for(var x = 0; x < imageWidth; x++) {
 					var index 		= ((imageWidth * y) + x ) * 4;
 
-					if(this.options.mode == 'horizental')
+					if(this.options.mode == 'horizontal')
 					{
 						var PlusIndex	= ((imageWidth * y) + (x + this.options.radius)) * 4;
 						var MinusIndex	= ((imageWidth * y) + (x + this.options.radius * -1)) * 4;
