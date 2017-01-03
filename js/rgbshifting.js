@@ -42,7 +42,7 @@
 				if(radius_chars[radius_chars.length - 1] == '%')
 				{
 					this.options.radius = this.options.radius.replace('%','') / 1;
-					if(this.options.mode == 'horizental')
+					if(this.options.mode == 'horizontal')
 						this.options.radius = parseInt(imageWidth * this.options.radius / 100);
 					else
 						this.options.radius = parseInt(imageHeight * this.options.radius / 100);
